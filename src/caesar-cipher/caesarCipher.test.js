@@ -14,4 +14,7 @@ describe("Caesar's Cipher", () => {
   test("rotating back to the beginning of the alphabet when steps reach beyong letter 'z'/'Z'", () => {
     expect(caesarCipher("excalibur", 5)).toBe("jchfqngzw");
   });
+  test("ignore non-letters", () => {
+    expect(caesarCipher("Shoot!!", 5)).toBe("Xmtty!!");
+  });
 });
